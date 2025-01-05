@@ -89,12 +89,14 @@ body *{
     z-index: 1;
 
     transform: translateY(-50%);
-
+    animation: slide-out 0.4s;
 }
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
+    
+    /*right: 0;
+    left: initial;*/
 }
 
 #switch span {
@@ -109,9 +111,7 @@ body *{
 }
 
 #switch button:hover{
-    background: rgb(219, 217, 217) var(--switch-bg-url)no-repeat center;
-    transition: background 0.5s;
-    border: 1px solid grey;
+    outline: 8px solid var(--highlight-color);
 }
 
 /* Links */
@@ -183,4 +183,24 @@ footer a{
     
     font:500;
     font-size: 16px;
+}
+
+/* Animções*/
+
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+ to{
+     left: 50%;
+ }
+}
+
+@keyframes slide-out{
+    from{
+        left: 50%;
+    }
+ to{
+     right: 0;
+ }
 }
