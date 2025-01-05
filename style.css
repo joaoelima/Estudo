@@ -108,6 +108,12 @@ body *{
     border-radius: 9999px;
 }
 
+#switch button:hover{
+    background: rgb(219, 217, 217) var(--switch-bg-url)no-repeat center;
+    transition: background 0.5s;
+    border: 1px solid grey;
+}
+
 /* Links */
 
 ul{
